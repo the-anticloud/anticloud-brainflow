@@ -1,14 +1,12 @@
 # BRAINFLOW
 
-> This is a BrainFlow implementation of my [bci-workshop fork](https://github.com/ChilloutCharles/bci-workshop) that sends your brain's relaxation and focus metrics, and power values based on the common frequency bands used in EEG measuements, for left, right and both sides of the head. Logic to read actions off of your brainwaves using machine learning. Read the README.md in the `model/intent` directory for more information. Additional support for heart rate and respiration is available when supported by your hardware.
+> BrainFlow is a library intended to obtain, parse and analyze EEG, EMG, ECG, and other kinds of data from biosensors.
 
-**Category:** BRAIN_COMPUTER_INTERFACE · **Ecosystem:** python · **Vendored upstream:** https://github.com/ChilloutCharles/BrainFlowsIntoVRChat · **Pinned commit:** `b711480cff1c3eb7279414cd63bc57c1fdf2aa2b` · **Vendor:** Anticloud FZ LLE
-
-> **Note:** this package vendors `https://github.com/ChilloutCharles/BrainFlowsIntoVRChat` as the implementation for the `BRAINFLOW` slot. The vendored repository name differs from the package name; the pin above is the exact commit vendored here.
+**Category:** BRAIN_COMPUTER_INTERFACE · **Ecosystem:** python · **Vendored upstream:** https://github.com/brainflow-dev/brainflow · **Pinned commit:** `e3caf4b7289a2616efb76c8a3276d2c2086fd488` · **Vendor:** Anticloud FZ LLE
 
 ## What This Project Is
 
-This is a BrainFlow implementation of my [bci-workshop fork](https://github.com/ChilloutCharles/bci-workshop) that sends your brain's relaxation and focus metrics, and power values based on the common frequency bands used in EEG measuements, for left, right and both sides of the head. Logic to read actions off of your brainwaves using machine learning. Read the README.md in the `model/intent` directory for more information. Additional support for heart rate and respiration is available when supported by your hardware.
+BrainFlow is a library intended to obtain, parse and analyze EEG, EMG, ECG, and other kinds of data from biosensors.
 
 This is the upstream project, vendored at the pinned commit above and packaged offline-first. The 12 improvements Anticloud adds live in `anticloud/` and are described under *Anticloud Overlay* below. Every fact in this file traces to a file in this directory.
 
@@ -21,7 +19,7 @@ pip install -e .
 
 ## Usage
 
-We recommend updating to this schema. However, if your assets are still using the old parameter scheme, you can switch to them by adding the `--use-old-reporter` launch argument.
+See the upstream README (linked above) for usage. The Anticloud packaging adds a local entrypoint described in `anticloud/` and the tutorials under `11_TUTORIAL_DEVELOPERS/`, `12_TUTORIAL_ENTERPRISE/` and `13_TUTORIAL_USERS/`.
 
 ## Anticloud Overlay
 
@@ -63,7 +61,7 @@ The upstream licence is preserved in `LICENSE` and `THIRD_PARTY_LICENSES/`. The 
 SHA3-256 of `BENCH.json`:
 
 ```
-6568284495f37aa19e1081cad020fb668993bc9387f3d17402559de7710205df
+89f8341eee72f4ed40d0a9290324396c52b2b36a8353be53329b245a545ab0e9
 ```
 
 Recompute the hash above and compare — any drift means the package has been tampered with and the seal is invalid. This is a self-assessment; no external audit has been performed and a SOC 2 / NIST independent audit is committed post-funding.
