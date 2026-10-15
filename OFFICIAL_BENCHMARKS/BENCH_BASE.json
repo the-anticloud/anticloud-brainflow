@@ -1,0 +1,221 @@
+{
+ "schema": "anticloud.tier-bench/1",
+ "project": "BRAINFLOW",
+ "source": {
+  "repo_path": "E:\\fenta\\Downloads\\The Anticloud\\ANTICLOUD_REPOS\\BRAIN_COMPUTER_INTERFACE\\BRAINFLOW\\UPSTREAM_CLONE",
+  "git": {
+   "head": null,
+   "url": null,
+   "branch": "master",
+   "committed_at": "2026-09-29T11:06:59+04:00",
+   "sha_unverified": true,
+   "note": "prior contamination (OPENMRS parent SHA + embedded token) removed; resolve via GitHub API before quoting"
+  }
+ },
+ "metrics": {
+  "files_total": 48,
+  "source_files_scanned": 33,
+  "lines_of_code": 2889,
+  "languages": {
+   ".py": 33,
+   ".md": 4,
+   "(none)": 3,
+   ".wav": 3,
+   ".png": 2,
+   ".txt": 1,
+   ".keras": 1,
+   ".gz": 1
+  }
+ },
+ "licence": {
+  "spdx": "MIT",
+  "class": "A",
+  "source_file": "LICENSE",
+  "redistribution_allowed": true
+ },
+ "dependencies": {
+  "count": 0,
+  "unique": 0,
+  "by_ecosystem": {},
+  "list": []
+ },
+ "owasp_top10": {
+  "total_findings": 5,
+  "files_with_findings": 5,
+  "severity": {
+   "high": 1,
+   "medium": 1,
+   "low": 3
+  },
+  "categories": {
+   "A01-BrokenAccessControl": {
+    "count": 0,
+    "findings": []
+   },
+   "A02-CryptographicFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A03-Injection": {
+    "count": 1,
+    "findings": [
+     {
+      "severity": "high",
+      "file": "model/intent/train.py",
+      "line": 58,
+      "cwe": "CWE-502",
+      "snippet": "initial_data = pickle.load(f)"
+     }
+    ]
+   },
+   "A04-InsecureDesign": {
+    "count": 3,
+    "findings": [
+     {
+      "severity": "low",
+      "file": "main.py",
+      "line": 133,
+      "cwe": "CWE-",
+      "snippet": "fft_size= 64 * 10 # TODO: Make this configurable"
+     },
+     {
+      "severity": "low",
+      "file": "dearpygui_viewer/dearpygui_viewer.py",
+      "line": 129,
+      "cwe": "CWE-",
+      "snippet": "# ToDo initialize data_frames"
+     },
+     {
+      "severity": "low",
+      "file": "dearpygui_viewer/ml_actions_buffer.py",
+      "line": 30,
+      "cwe": "CWE-",
+      "snippet": "self._action_paths_to_key[\"/avatar/parameters/BFI/MLAction/Action\"] = \"Action\" # todo refactor generation of paths"
+     }
+    ]
+   },
+   "A05-SecurityMisconfiguration": {
+    "count": 1,
+    "findings": [
+     {
+      "severity": "medium",
+      "file": "model/intent/record_eeg.py",
+      "line": 32,
+      "cwe": "CWE-1188",
+      "snippet": "parser.add_argument('--enable-sounds', type=bool, required=False, help='enables sound indicators for starting / stopping a recording', default=True)"
+     }
+    ]
+   },
+   "A06-VulnerableComponents": {
+    "count": 0,
+    "findings": []
+   },
+   "A07-AuthFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A08-SoftwareDataIntegrity": {
+    "count": 0,
+    "findings": []
+   },
+   "A09-LoggingMonitoringFailures": {
+    "count": 0,
+    "findings": []
+   },
+   "A10-SSRF": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "owasp_llm_top10": {
+  "total_findings": 0,
+  "files_with_findings": 0,
+  "severity": {
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "categories": {
+   "LLM01-PromptInjection": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM02-SensitiveInfoDisclosure": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM03-SupplyChain": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM04-DataPoisoning": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM05-ImproperOutputHandling": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM06-ExcessiveAgency": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM07-SystemPromptLeak": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM08-VectorEmbeddingWeaknesses": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM09-Misinformation": {
+    "count": 0,
+    "findings": []
+   },
+   "LLM10-UnboundedConsumption": {
+    "count": 0,
+    "findings": []
+   }
+  }
+ },
+ "sbom": {
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:40ea83f7-2660-5b19-9194-8b8b84dfa336",
+  "version": 1,
+  "metadata": {
+   "timestamp": "2026-10-06T06:50:33Z",
+   "component": {
+    "type": "application",
+    "name": "BRAINFLOW",
+    "version": "83b357604d34",
+    "bom-ref": "pkg:generic/anticloud/BRAINFLOW@83b357604d34",
+    "purl": "pkg:generic/anticloud/BRAINFLOW@83b357604d34",
+    "licenses": [
+     {
+      "license": {
+       "id": "MIT"
+      }
+     }
+    ]
+   },
+   "properties": [
+    {
+     "name": "anticloud:source-commit",
+     "value": ""
+    },
+    {
+     "name": "anticloud:source-url",
+     "value": "https://github.com/the-anticloud/OPENMRS_CORE.git"
+    },
+    {
+     "name": "anticloud:tier",
+     "value": "tier-agent"
+    }
+   ]
+  },
+  "components": []
+ },
+ "elapsed_seconds": 0.55
+}
